@@ -1,0 +1,147 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+header {
+    background-color: red;
+    height: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex.column {
+    flex-direction: column;
+}
+
+.d-flex.space-between {
+    justify-content: space-between;
+}
+
+.main-game-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.game-column {
+    background-color: green;
+    height: calc(100vh - 90px);
+    margin: 0 10px;
+    width: calc(33.3% - 20px);
+}
+
+.game-column-title {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+    font-size: 28px;
+}
+
+.column-section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: brown;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.column-section-title p {
+    font-size: 25px;
+    margin: 0;
+}
+
+.column-section-title i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 30px;
+    font-size: 40px;
+}
+
+.column-section-product {
+    margin: 10px 0;
+    border: 1px solide black;
+}
+
+.product-img {
+    width: 30%;
+    background-color: #bdb787;
+    border-right: 3px solid black;
+}
+
+.product-info {
+    width: 100%;
+    background-color: #948e65;
+    padding: 15px;
+}
+
+.product-info p,
+.product-info div {
+    font-size: 18px;
+}
+
+.product-header {
+    width: 100%;
+}
+
+.product-header p {
+    margin: 0;
+}
+
+.product-info-main {
+    align-items: center;
+}
+
+.products-info-active p {
+    margin: 0;
+}
+
+.products-info-buttons {
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+
+.products-info-buttons i {
+    margin: 0 5px;
+}
+
+.products-info-actions {
+    align-items: center;
+}
+
+.product-info-action {
+    background-color: #fff;
+    margin: 0 3px;
+    padding: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.products-info-footer {
+    align-items: center;
+}
+
+.products-info-active p {
+    font-size: 18px;
+}
