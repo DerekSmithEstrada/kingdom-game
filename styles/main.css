@@ -1,3 +1,7 @@
+.screen-error {
+    display: none;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -10,15 +14,36 @@ body {
     margin: 0;
     height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
 }
 
 header {
     background-color: red;
     height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
 }
 
 img {
     width: 100%;
+}
+
+header .progress-bar {
+    border: 1px solid #272727;
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+
+header .progress-bar #progress {
+    background-color: #82B742;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: ease-in-out 1s;
 }
 
 .d-flex {
@@ -36,7 +61,9 @@ img {
 .main-game-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #82B742;
+    transition: ease-in-out 1s;
 }
 
 .game-column {
@@ -87,6 +114,20 @@ img {
     width: 30%;
     background-color: #bdb787;
     border-right: 3px solid black;
+    position: relative;
+}
+
+.product-img img {
+    min-width: 150px;
+}
+
+.product-img::after {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .product-info {
@@ -94,17 +135,18 @@ img {
     background-color: #948e65;
     padding: 15px;
     position: relative;
+    max-width: 70%;
 }
 
 .product-info-hover {
     display: none;
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 30%;
     transform: translateX(100%);
     border: 1px solid #000;
     padding: 10px;
-    max-width: 600px;
+    max-width: 800px;
     background-color: #b4ac8d;
 }
 
@@ -154,6 +196,7 @@ img {
 
 .products-info-actions {
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .product-info-action {
@@ -189,4 +232,29 @@ img {
 
 .product-info-main:hover p.hover-text {
     display: block;
+}
+
+@media screen and (max-width: 1080px) {
+    .main-game-container,
+    header {
+        display: none;
+    }
+
+    .screen-error {
+        display: block;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('../images/sign.png');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 200px;
+        padding: 20px 90px;
+        text-align: center;
+        color: #fff;
+    }
 }
